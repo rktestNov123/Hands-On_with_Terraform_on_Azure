@@ -22,11 +22,9 @@ provider "azurerm" {
 module "securestorage" {
   source  = "app.terraform.io/test11032023/securestorage/azurerm"
   version = "1.0.0"
-  # insert required variables here
   resource_group_name  = azurerm_resource_group.rg.name
   storage_account_name = azurerm_resource_group.rg.name
-  environment          = "Production"
- 
+  environment          = "Production" 
   location             = azurerm_resource_group.rg.location
 }
 
