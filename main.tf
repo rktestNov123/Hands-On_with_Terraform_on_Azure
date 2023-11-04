@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 3.43.0" 
+      version = ">= 3.43.0"
     }
   }
   cloud {
@@ -23,7 +23,7 @@ module "securestorage" {
   source               = "app.terraform.io/test11032023/securestorage/azurerm"
   version              = "1.0.0"
   resource_group_name  = azurerm_resource_group.rg.name
-  storage_account_name = azurerm_resource_group.rg.name
+  storage_account_name = "prodstorageacct"
   environment          = "Production"
   location             = azurerm_resource_group.rg.location
 }
