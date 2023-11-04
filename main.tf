@@ -23,7 +23,7 @@ module "securestorage" {
   source               = "app.terraform.io/test11032023/securestorage/azurerm"
   version              = "1.0.0"
   resource_group_name  = azurerm_resource_group.rg.name
-  storage_account_name = "prodstorageacct"
+  storage_account_name = "prodkptfstorageacct"
   environment          = "Production"
   location             = azurerm_resource_group.rg.location
 }
